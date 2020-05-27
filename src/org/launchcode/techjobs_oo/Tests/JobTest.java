@@ -50,4 +50,20 @@ public class JobTest {
     public void testJobsForEquality() {
         assertFalse(testJobOne == testEqualsJobOne);
     }
+
+    @Test
+    public void testToStringMethod() {
+        assertEquals("\n" +
+                "ID: 1\n" +
+                "Name: Product tester\n" +
+                "Employer: ACME\n" +
+                "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+                "Core Competency: Persistence" +
+                "\n", testJobOne.toString());
+
+        assertEquals("OOPS! This job does not seem to exist.", testEmptyJob.toString());
+    }
 }
+
+
